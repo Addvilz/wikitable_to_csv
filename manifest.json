@@ -1,0 +1,27 @@
+{
+    "name": "Wiki table copier",
+    "author": "Addivlz <mrtreinis@gmail.com>",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "This extension allows you to copy any Wikipedia table to clipboard in convenient CSV format",
+    "homepage_url": "https://github.com/Addvilz/wikitable_to_csv",
+    "icons": {
+        "16": "icons/icon16.png",
+        "24": "icons/icon24.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "https://*.wikipedia.org/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.wikipedia.org/*"
+            ],
+            "js": [
+                "src/inject.js"
+            ]
+        }
+    ]
+}
